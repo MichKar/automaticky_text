@@ -6,20 +6,20 @@ let delay = 500 / speedOr.value;
 
 console.log(speedOr.value);
 
-function printText(){
-    heading.innerText = text.slice(0,idletter);
+function printText() {
+    heading.innerText = text.slice(0, idletter);
 
     idletter++;
 
-    if(idletter > text.length) {
+    if (idletter > text.length) {
         idletter = 1;
     }
 
-    setTimeout(printText, delay);    
+    setTimeout(printText, delay);
 };
 
 printText();
 
-speedOr.addEventListener("input",function(event){
-    delay = 500/event.target.value;
+speedOr.addEventListener("input", function (event) {
+    delay = 500 / event.target.value;
 });
